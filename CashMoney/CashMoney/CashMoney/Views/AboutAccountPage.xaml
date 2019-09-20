@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CashMoney.Views.AboutAccountPage"
+             Title="Информация о счёте">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Название счёта: " />
+            <Label Text="{Binding Name}" />
+            <Label Text="Баланс:" />
+            <Label Text="{Binding TotalAmount}" />
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Добавить расход"
+                        Clicked="OnDebitTransactionClicked"/>
+                <Button Text="Добавить доход" 
+                        Clicked="OnIncomeTransactionClicked"/>
+            </StackLayout>
+            <Button Text="Удалить" Clicked="DeleteAccount"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
