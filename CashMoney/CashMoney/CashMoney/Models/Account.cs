@@ -9,8 +9,10 @@ namespace CashMoney.Models
 
         [NotNull]
         public string Name { get; set; }
+
         [NotNull]
         public decimal TotalAmount { get; set; }
+
         public override string ToString()
         {
             return Name;

@@ -32,7 +32,8 @@ namespace CashMoney.Views
                 {
                     When = DateTime.Now,
                     Amount = decimal.Parse(amountEntry.Text),
-                });
+                    Account_id = account.Id
+                }) ;
                 await Navigation.PopAsync();
             }
         }

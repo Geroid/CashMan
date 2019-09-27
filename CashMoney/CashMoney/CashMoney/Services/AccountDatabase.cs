@@ -18,6 +18,7 @@ namespace CashMoney.Services
             _database.CreateTableAsync<Payee>().Wait();
         }
 
+        
         public Task<List<Account>> GetAccountsAsync()
         {
             return _database.Table<Account>().ToListAsync();

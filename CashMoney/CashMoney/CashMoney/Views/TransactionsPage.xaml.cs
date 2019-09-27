@@ -16,5 +16,11 @@ namespace CashMoney.Views
         {
             InitializeComponent();
         }
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            listView.ItemsSource = await AccountsView.Database.GetTransactionsAsync();
+        }
     }
 }
